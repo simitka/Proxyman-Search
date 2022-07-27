@@ -22,3 +22,7 @@
 6. Скопировать содержание скрипта на GitHub и вставить в окно программы
 7. Нажать Save & Active
 <img width="1400" alt="image" src="https://user-images.githubusercontent.com/60274458/181373525-048554e1-1838-4aa2-9986-0b00c6ef3a6d.png">
+
+### Документация
+- https://docs.proxyman.io/scripting/snippet-code#on-request
+- https://docs.proxyman.io/scripting/snippet-code#comment-and-highlight-with-color
