@@ -18,22 +18,22 @@
         whereSearch: 'response'
       },
       green: {
-        whatFind: '"TLE Undo Tapped Reward"',
+        whatFind: '"method": "getContext"',
         exactSearch: true,
-        whereSearch: 'response'
+        whereSearch: 'request'
       },
       yellow: {
-        whatFind: 'Impression',
+        whatFind: 'Tiles Android: Start Promo',
         exactSearch: true,
         whereSearch: 'request'
       },
       purple: {
-        whatFind: '"MODEL": "click',
+        whatFind: '"model": "Click',
         exactSearch: false,
         whereSearch: 'request'
       },
       gray: {
-        whatFind: '"resuLT": TrUe',
+        whatFind: '"event_name": "Gandalf spot"',
         exactSearch: false,
         whereSearch: 'everywhere'
       }
@@ -69,7 +69,7 @@
       };
       };
 
-      strJson = JSON.stringify(strJson).split(':').join(': ').split(',').join(', ');
+      strJson = JSON.stringify(strJson).split(': ').join(':').split(':').join(': ').split(',').join(', ');
 
       switch (exactSearchValue) {
         case true:
