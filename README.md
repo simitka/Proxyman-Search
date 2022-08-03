@@ -1,6 +1,6 @@
 # Proxyman-Search script
 Выше можно скачать скрипт для ProxyMan, который ищет в теле запроса/ответа указанную фразу и, в случае успеха, красит и добавляет комментарий к соответствующему запросу/ответу
-<img width="1400" alt="image" src="https://user-images.githubusercontent.com/60274458/181373820-c8bfbfe0-225b-4db8-993a-84deb390e34a.png">
+<img width="1552" alt="Снимок экрана 2022-08-03 в 14 43 44" src="https://user-images.githubusercontent.com/60274458/182590088-9d97f2c7-5696-469e-97de-1c575343fcf4.png">
 ### На данный момент скрипт умеет
 - [x] Возможность выбрать где будет осуществляться поиск
 	- [x] поиск в request body	
