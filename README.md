@@ -9,8 +9,8 @@ A script for searching phrase in the body of the request-response and highlight 
 	- [x] request-response switcher
 	- [x] search in request and response at the same time
 - [x] Two search modes:
-	- [x] exact search – search for a specific phrase
-	- [x] soft search – search including the phrase within the phrase
+	- [x] exact search – search for a phrase case-sensitive and space-sensitive
+	- [x] soft search – search including the phrase within the phrase, case-insensitive
 - [ ] Search for and highlight several different phrases with the same color
 
 
