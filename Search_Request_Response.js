@@ -9,31 +9,50 @@
     var color = {
       red: {
         whatFind: '',
-        exactSearch: true,
+        exactSearch: false,
         whereSearch: 'request'
       },
       blue: {
-        whatFind: '',
-        exactSearch: true,
-        whereSearch: 'response'
+        whatFind: 'ftue_',
+        exactSearch: false,
+        whereSearch: 'request'
       },
       green: {
-        whatFind: '"method": "getContext"',
+        whatFind: [
+          '"method": "getToken"',
+          '"method": "getContext"'
+        ],
         exactSearch: true,
         whereSearch: 'request'
       },
       yellow: {
-        whatFind: 'Tiles Android: Start Promo',
+        whatFind: [
+          '"model": "Impression"',
+          '"model": "Click"'
+        ],
         exactSearch: true,
         whereSearch: 'request'
       },
       purple: {
-        whatFind: '"model": "Click',
-        exactSearch: false,
+        whatFind: [
+          '"model": "ApplovinAdsImpression"',
+          '"model": "AdsClick"',
+          '"event_name": "Rewarded Video Request"',
+          '"event_name": "Interstitial Showed"'
+        ],
+        exactSearch: true,
         whereSearch: 'request'
       },
       gray: {
-        whatFind: '"event_name": "Gandalf spot"',
+        whatFind: [
+          'Gandalf Spot',
+          'InvalidNativeElement'
+        ],
+        exactSearch: true,
+        whereSearch: 'request'
+      },
+      commentOnly: {
+        whatFind: '"model": "AppLaunch"',
         exactSearch: false,
         whereSearch: 'everywhere'
       }
@@ -42,14 +61,28 @@
 
     for (var key in color) {
       if (color[key].whatFind != "") {
-        if (searchFun(color[key].whatFind, color[key].whereSearch, color[key].exactSearch) != -1) {
-          response.color = key;
-          response.comment = color[key].whatFind;
-          return response;
+        if (Array.isArray(color[key].whatFind) == true) {
+          for (var i = 0; i < color[key].whatFind.length; i++) {
+            if (searchFun(color[key].whatFind[i], color[key].whereSearch, color[key].exactSearch) != -1) {
+              response.color = key;
+              response.comment = color[key].whatFind[i];
+              return response;
+            }
+          }
+        } else if (Array.isArray(color[key].whatFind) == false) {
+          if (searchFun(color[key].whatFind, color[key].whereSearch, color[key].exactSearch) != -1) {
+            response.color = key;
+            response.comment = color[key].whatFind;
+            return response;
+          }
+        } else if (color[key] == "commentOnly") {
+          if (searchFun(color[key].whatFind, color[key].whereSearch, color[key].exactSearch) != -1) {
+            response.comment = color[key].whatFind;
+            return response;
+          }
         }
       }
     }
-
     return response;
 
     ///////////////////////////////// FUNCTION /////////////////////////////////
