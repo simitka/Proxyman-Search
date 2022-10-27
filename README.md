@@ -17,9 +17,9 @@ A script for searching phrase in the body of the request-response and highlight 
 Tutorial for install and configurate Proxyman are available to the Appsyoulove team on the [wiki](https://appsyoulove.atlassian.net/l/cp/FpGYX4TA) or easily googled.
 To configure the script, you need to change the parameter values in the `color` array
 <img width="1508" alt="Снимок экрана 2022-10-27 в 20 49 23" src="https://user-images.githubusercontent.com/60274458/198362428-437931f8-b05e-45c6-8951-7612fb6bfc25.png">
-There are 6 objects in the array, each of which indicates which color to highlight the found phrase: red, blue, green, yellow, purple, gray. 
+There are 7 objects in the array, each of which indicates which color to highlight the found phrase: red, blue, green, yellow, purple, gray, white (CommentOnly). 
 Each object has 3 properties, through which the search is configured: 
- - `whatFind: 'any_phrase'` – is what will be searched for
+ - `whatFind: 'any_phrase_or_[array_of_phrases]'` – is what will be searched for
  - `whereSearch: 'request/response/everywhere'` – where the request will be searched
 	 - `request` – in the request body
 	 - `response` – in the response body 
