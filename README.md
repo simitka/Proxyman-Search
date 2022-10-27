@@ -1,6 +1,6 @@
 # Proxyman Search script
 A script for searching phrase in the body of the request-response and highlight + adds a comment to the response
-<img width="1552" alt="Снимок экрана 2022-10-27 в 20 46 18" src="https://user-images.githubusercontent.com/60274458/198361831-fde58d2f-c17a-4654-b474-1d08d1b76c25.png">
+<img width="1552" alt="Снимок экрана 2022-10-27 в 20 51 02" src="https://user-images.githubusercontent.com/60274458/198362749-93b63187-05bf-45f5-8d8a-66fa20c4216d.png">
 ### The script can do:
 - [x] Choose where the search will be carried out
 	- [x] search in request body	
