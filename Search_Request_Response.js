@@ -9,53 +9,53 @@
     ////whereSearch – искать внутри request / response / everywhere (request+response)
     var color = {
       red: {
-        whatFind: '',
         exactSearch: false,
-        whereSearch: 'request'
+        whereSearch: 'request',
+        whatFind: ''
       },
       blue: {
-        whatFind: 'ftue_',
         exactSearch: false,
-        whereSearch: 'request'
+        whereSearch: 'request',
+        whatFind: 'ftue_'
       },
       green: {
+        exactSearch: true,
+        whereSearch: 'request',
         whatFind: [
           '"method": "getToken"',
           '"method": "getContext"'
-        ],
-        exactSearch: true,
-        whereSearch: 'request'
+        ]
       },
       yellow: {
+        exactSearch: true,
+        whereSearch: 'request',
         whatFind: [
           '"model": "Impression"',
           '"model": "Click"'
-        ],
-        exactSearch: true,
-        whereSearch: 'request'
+        ]
       },
       purple: {
+        exactSearch: true,
+        whereSearch: 'request',
         whatFind: [
           '"model": "ApplovinAdsImpression"',
           '"model": "AdsClick"',
           '"event_name": "Rewarded Video Request"',
           '"event_name": "Interstitial Showed"'
-        ],
-        exactSearch: true,
-        whereSearch: 'request'
+        ]
       },
       gray: {
+        exactSearch: true,
+        whereSearch: 'request',
         whatFind: [
           'Gandalf Spot',
           'InvalidNativeElement'
-        ],
-        exactSearch: true,
-        whereSearch: 'request'
+        ]
       },
       commentOnly: {
-        whatFind: '"model": "AppLaunch"',
         exactSearch: false,
-        whereSearch: 'everywhere'
+        whereSearch: 'everywhere',
+        whatFind: '"model": "AppLaunch"'
       }
     };
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////
