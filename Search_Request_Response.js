@@ -1,5 +1,5 @@
-///////////////////////////////////////////////////////////////////////////////////////////////////////////  
-///////////////////////////////////////////// НАСТРОЙКА ПОИСКА ////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////  
+///////////////////////////////////////////// НАСТРОЙКА ПОИСКА ///////////////////////////////////////////
 //С помощью массива color ниже можно выполнить поиск любого количества фраз внутри запроса-ответа
 //Найденные фразы помечаются цветами и добавляются в колонку Comment
 //Для пометки доступны 7 цветов: red, blue, green, yellow, purple, gray, white (commentOnly)
@@ -11,25 +11,17 @@ const color = {
   red: {
     exactSearch: false,
     whereSearch: 'everywhere',
-    whatFind: [
-      '"model": "Transaction"',
-      '"event_name": "Booster Used"',
-      '"event_name": "TLE Booster Used"',
-      'InvalidNativeElement'
-    ]
+    whatFind: ''
   },
   gray: {
     exactSearch: true,
     whereSearch: 'request',
-    whatFind: [
-      'Gandalf Spot',
-      '"eventName": "bannerDefault"'
-    ]
+    whatFind: '"eventName": "bannerDefault"'
   },
   blue: {
     exactSearch: false,
     whereSearch: 'everywhere',
-    whatFind: 'ftue_'
+    whatFind: '"model": "Transaction"'
   },
   green: {
     exactSearch: true,
@@ -37,7 +29,8 @@ const color = {
     whatFind: [
       '"method": "getToken"',
       '"method": "getContext"',
-      '"model": "FirebaseMapping"'
+      '"model": "FirebaseMapping"',
+      '"model": "MailingListStatusesMapping"'
     ]
   },
   yellow: {
@@ -55,19 +48,16 @@ const color = {
     whatFind: [
       '"model": "ApplovinAdsImpression"',
       '"model": "AdsClick"',
-      '"event_name": "Rewarded Video Request"',
-      '"event_name": "Interstitial Showed"'
+      '"event_name": "rewarded_video_request"',
+      '"event_name": "interstitial_video"',
+      '"event_name": "rewarded_video"',
+      '"model": "ImpressionFail"'
     ]
   },
   commentOnly: {
     exactSearch: true,
     whereSearch: 'everywhere',
-    whatFind: [
-      '"model": "StartEndSession"',
-      '"model": "AppLaunch"',
-      '"event_name": "sessionStart"',
-      '"model": "TrackInstalls"'
-    ]
+    whatFind: ''
   }
 };
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -131,7 +121,6 @@ async function onResponse(context, url, request, response) {
 
     strJson = JSON.stringify(strJson).split(': ').join(':').split(':').join(': ').split(',').join(', ');
     return strJson.search(regEx);
-
   }
 }
 ////////////////////////////////////////////////////////////////////////////
