@@ -10,8 +10,11 @@
 const color = {
   red: {
     exactSearch: false,
-    whereSearch: 'everywhere',
-    whatFind: ''
+    whereSearch: 'request',
+    whatFind: [
+      '"method": "verify_receipt_data_v2"',
+      '"method": "verify_purchase"'
+    ]
   },
   gray: {
     exactSearch: true,
@@ -39,7 +42,8 @@ const color = {
     whatFind: [
       '"model": "Impression"',
       '"model": "Click"',
-      '"model": "inApps"'
+      '"model": "inApps"',
+      '"model": "PaidSubscriptionActivation"'
     ]
   },
   purple: {
